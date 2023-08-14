@@ -115,4 +115,36 @@ pm2 list
 
 这将显示所有通过 pm2 启动的进程列表，包括项目名称、进程 ID、状态、CPU 和内存使用情况等信息。
 
+在终端中输入如下命令，可以看到对应的json格式视频文件列表
+
+```
+curl 127.0.0.1:3000/videos 
+```
+
+4. **配置nginx文件**
+
+```
+    server {
+        listen 443 ssl;
+        server_name domain.com; # 替换为您的域名
+        ssl_certificate /etc/nginx/key_crt/chaye.one.crt; # 替换为您下载的证书文件路径
+        ssl_certificate_key /etc/nginx/key_crt/chaye.one.key; # 替换为您下载的密钥文件路径
+        ssl_protocols TLSv1.2 TLSv1.3; # 选择您需要支持的 SSL/TLS 协议版本
+
+        location /videos {
+            proxy_pass http://127.0.0.1:3000; # 替换为您Node.js应用的监听地址
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-Proto $scheme;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "upgrade";
+        }
+    }	
+
+```
+
+这段代码是一个 Nginx 配置块，它的作用是将客户端对指定路径 /videos 的请求代理（转发）到后端运行在 127.0.0.1 的 Node.js 应用，该应用监听在端口 3000 上。
+
+这段配置的效果是，当客户端请求服务器上的 /videos 路径时，Nginx 会将请求转发给 Node.js 应用，而在转发过程中，它会适当地设置一些头部信息，以确保代理过程中的正确性和安全性。这对于将静态的 Nginx 服务器与动态的 Node.js 应用结合起来提供服务是非常常见的配置。
 
