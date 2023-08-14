@@ -7,6 +7,19 @@
 ### 项目结构
 ---
 
+```
+
+├── 02_douyin_nodejs
+│   ├── node_modules            # 安装的模块
+│   │   ├── accepts
+│   │   ......
+│   ├── package-lock.json
+│   ├── package.json
+│   └── server.js               # js脚本
+├── douyin_random.php           # 观看视频的脚本
+
+
+```
 
 
 
