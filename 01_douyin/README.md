@@ -61,7 +61,7 @@ https://github.com/Yiwei666/02_javascript_cf-worker/wiki/01_linux%E5%AE%89%E8%A3
 
 使用 Node.js 进程管理工具（例如 PM2）：
 
-首先，全局安装 PM2，可以使用以下命令在终端中执行：
+1. 首先，全局安装 PM2，可以使用以下命令在终端中执行：
 
 ```
 npm install -g pm2
@@ -69,7 +69,7 @@ npm install -g pm2
 
 进入包含 server.js 的项目目录。
 
-使用 PM2 启动应用程序：
+2. 使用 PM2 启动应用程序：
 
 ```
 pm2 start server.js
@@ -77,5 +77,12 @@ pm2 start server.js
 
 这将启动应用程序，并将其作为后台进程运行。PM2 会自动处理崩溃后的重启，以及监控日志和资源使用情况等。
 
+3. 要查看正在运行的项目，您可以使用以下命令在 pm2 中列出所有正在运行的进程：
+
+```
+pm2 list
+```
+
+这将显示所有通过 pm2 启动的进程列表，包括项目名称、进程 ID、状态、CPU 和内存使用情况等信息。
 
 
