@@ -31,7 +31,7 @@ node server.js
 2. 修改nginx配置文件
 
 ```
-        location //performance {
+        location /performance {
             proxy_pass http://127.0.0.1:2000; # 替换为您Node.js应用的监听地址
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
