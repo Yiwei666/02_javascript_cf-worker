@@ -7,6 +7,22 @@
 ---
 
 ```
+├── 03_performance_nodejs
+│   ├── node_modules
+│   ├── package-lock.json
+│   ├── package.json
+│   └── server.js
+```
+
+### 项目部署
+---
+
+```
+npm init -y                          # create a package.json file
+
+npm install express os ps-node       # Install the necessary packages
+
+node server.js
 
 ```
 
