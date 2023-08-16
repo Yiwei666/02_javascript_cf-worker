@@ -17,6 +17,8 @@
 ### 项目部署
 ---
 
+1. 安装依赖
+
 ```
 npm init -y                          # create a package.json file
 
@@ -26,6 +28,26 @@ node server.js
 
 ```
 
+2. 修改nginx配置文件
+
+```
+        location //performance {
+            proxy_pass http://127.0.0.1:2000; # 替换为您Node.js应用的监听地址
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-Proto $scheme;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "upgrade";
+        }
+```
+
+3. 测试访问
+
+```
+curl 127.0.0.1:2000/performance
+
+```
 
 
 ### 其他部署方式
