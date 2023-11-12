@@ -1,6 +1,6 @@
 # 项目功能
 
-
+Cloudflare Workers 是一种在 Cloudflare 的边缘服务器上运行的脚本，用于处理网络请求。
 
 
 # 环境配置
