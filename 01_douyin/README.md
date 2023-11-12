@@ -112,7 +112,7 @@ npm install express
 node 你的文件名.js
 ```
 
-将'你的文件名.js'替换为存放Node.js代码的文件名。
+将`你的文件名.js`替换为存放Node.js代码的文件名。
 
 node.js和npm安装，参考
 https://github.com/Yiwei666/02_javascript_cf-worker/wiki/01_linux%E5%AE%89%E8%A3%85node.js%E5%92%8Cnpm
