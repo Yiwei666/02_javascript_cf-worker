@@ -49,16 +49,40 @@ server.js 这段代码使用Node.js和Express框架创建了一个简单的Web�
 ├── douyin_random.php           # 观看视频的脚本
 
 
-注意：
-douyinVideo_page.php
-douyinVideo_random.php
+# 通过读取服务器上指定目录中的文件来生成视频列表
+douyin_random.php                               # 在手机端和电脑端的视频播放页面大小是固定的
+douyin_random_DeskMobile.php                    # 在手机端和电脑端的视频播放页面大小是自适应的
+douyin_random_black.php                         # 将播放页面背景颜色设置为纯黑色
 
-douyin_random.php                 # 在手机端和电脑端的视频播放页面大小是固定的
-douyin_random_DeskMobile.php      # 在手机端和电脑端的视频播放页面大小是自适应的
-douyin_random_black.php           # 将播放页面背景颜色设置为纯黑色
+
+# 通过读取服务器上指定目录中的文件来生成视频列表
+douyinVideo_page.php              
+douyinVideo_random.php            
 
 ```
 
+- 数据源:
+
+第一个脚本通过JavaScript中的fetch函数从API端点（https://chaye.one/videos）异步获取视频列表。这意味着视频列表是从一个远程服务器动态获取的。
+第二个脚本使用了PHP，通过读取服务器上指定目录中的文件来生成视频列表。这种方式是在服务器端通过PHP脚本预先生成的，而不是在客户端通过JavaScript异步请求获取的。
+
+
+- 实现语言:
+
+第一个脚本中的视频列表获取是通过客户端的JavaScript代码实现的。
+第二个脚本中的视频列表获取是通过服务器端的PHP代码实现的。
+
+
+- 数据格式:
+
+第一个脚本通过API获取的视频列表是JSON格式的，通过response.json()方法解析。
+第二个脚本通过PHP生成的视频列表是一个JavaScript数组，直接嵌入在HTML中。
+
+
+- 动态性:
+
+第一个脚本中的视频列表是在每次加载页面时通过API请求动态获取的。
+第二个脚本中的视频列表是在服务器端生成的，因此在每次页面加载时都使用相同的列表。
 
 
 ### 环境部署
