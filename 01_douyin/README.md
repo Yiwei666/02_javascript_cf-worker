@@ -48,12 +48,14 @@ server.js 这段代码使用Node.js和Express框架创建了一个简单的Web�
 
 
 # 通过读取服务器上指定目录中的文件来生成视频列表
+
 douyin_random.php                               # 在手机端和电脑端的视频播放页面大小是固定的
 douyin_random_DeskMobile.php                    # 在手机端和电脑端的视频播放页面大小是自适应的
 douyin_random_black.php                         # 将播放页面背景颜色设置为纯黑色
 
 
 # 通过读取服务器上指定目录中的文件来生成视频列表
+
 douyinVideo_page.php              
 douyinVideo_random.php            
 
