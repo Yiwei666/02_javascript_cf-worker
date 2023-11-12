@@ -47,7 +47,7 @@ server.js 这段代码使用Node.js和Express框架创建了一个简单的Web�
 ├── douyin_random.php           # 观看视频的脚本
 
 
-# 通过读取服务器上指定目录中的文件来生成视频列表
+# 通过JavaScript中的fetch函数从API端点异步获取视频列表
 
 douyin_random.php                               # 在手机端和电脑端的视频播放页面大小是固定的
 douyin_random_DeskMobile.php                    # 在手机端和电脑端的视频播放页面大小是自适应的
@@ -63,7 +63,7 @@ douyinVideo_random.php
 
 - 数据源:
 
-第一个脚本通过JavaScript中的fetch函数从API端点（https://chaye.one/videos）异步获取视频列表。这意味着视频列表是从一个远程服务器动态获取的。
+第一个脚本通过JavaScript中的fetch函数从API端点`（https://chaye.one/videos）`异步获取视频列表。这意味着视频列表是从一个远程服务器动态获取的。
 第二个脚本使用了PHP，通过读取服务器上指定目录中的文件来生成视频列表。这种方式是在服务器端通过PHP脚本预先生成的，而不是在客户端通过JavaScript异步请求获取的。
 
 
