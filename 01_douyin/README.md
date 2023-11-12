@@ -48,7 +48,11 @@ server.js 这段代码使用Node.js和Express框架创建了一个简单的Web�
 │   └── server.js               # js脚本
 ├── douyin_random.php           # 观看视频的脚本
 
+
 注意：
+douyinVideo_page.php
+douyinVideo_random.php
+
 douyin_random.php                 # 在手机端和电脑端的视频播放页面大小是固定的
 douyin_random_DeskMobile.php      # 在手机端和电脑端的视频播放页面大小是自适应的
 douyin_random_black.php           # 将播放页面背景颜色设置为纯黑色
