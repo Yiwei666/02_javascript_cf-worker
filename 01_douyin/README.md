@@ -158,8 +158,8 @@ curl 127.0.0.1:3000/videos
     server {
         listen 443 ssl;
         server_name domain.com; # 替换为您的域名
-        ssl_certificate /etc/nginx/key_crt/chaye.one.crt; # 替换为您下载的证书文件路径
-        ssl_certificate_key /etc/nginx/key_crt/chaye.one.key; # 替换为您下载的密钥文件路径
+        ssl_certificate /etc/nginx/key_crt/domain.com.crt; # 替换为您下载的证书文件路径
+        ssl_certificate_key /etc/nginx/key_crt/domain.com.key; # 替换为您下载的密钥文件路径
         ssl_protocols TLSv1.2 TLSv1.3; # 选择您需要支持的 SSL/TLS 协议版本
 
         location /videos {
