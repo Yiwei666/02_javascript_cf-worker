@@ -18,7 +18,7 @@ Remaining time until May 23rd, 2025: 16739 hours (60261595 seconds)
 
 - 基于`https://ipapi.co/`获取ip相关信息
 
-```
+```js
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request))
 })
